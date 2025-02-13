@@ -4,8 +4,8 @@
 # to PATH, if you want to use it from the command line without mentioning the full path
 # of the windows app
 
-$scope = Read-Host "Enter the scope whose PATH you want to change (e.g.: User, TEMP, SystemRoot; Default is User): "
-$appPath = Read-Host "Enter the app's path which you want to append to the PATH varible: "
+$scope = Read-Host "Enter the scope whose PATH you want to change (e.g.: User, TEMP, SystemRoot; Default is User)"
+$appPath = Read-Host "Enter the app's path which you want to append to the PATH varible"
 
 # Get the current value of the PATH varible
 $oldPath = [System.Environment]::GetEnvironmentVariable("Path", "$scope")
