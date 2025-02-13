@@ -16,6 +16,7 @@ if ($oldPath -like $appPath) {
 } else {
 # Append the app's path to the PATH variable if PATH doesn't contain appPath
 	$newPath = "$oldPath;$appPath"
+	[System.Environment]::SetEnvironmentVariable("Path", $newPath, $scope)
 	Write-Output "$appPath has been appended to $scope's PATH variable"
 }
 
